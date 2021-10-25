@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="headline">
+
+            <h2 style="text-align: center; color: red; font-size: 34px;">Myntra</h2>
+
+
+        </div>
+        <div class="timer">
+            <p><b>Sale ends in 3hrs </b></p>
+        </div>
+
+        <div class="slideshowContainer">
+
+            <div class="content">
+                <h2>HRX by Hrithik Roshan</h2>
+                <p>Unisex Fluorescent Green Colourblocked Uber Lifestyle Backpack</p>
+
+
+
+                <div>
+                    <button>4.2</button>
+                </div>
+                <hr>
+                <h2>Rs. 549 (50% OFF) </h2>
+                <p>inclusive of all taxes</p>
+                <div>
+                    <h3>SELECT SIZE</h3>
+                    <div class="dropdown">
+                        <button id="onesize"
+                            style="color: red;  border: 1px solid red; border-radius: 8%; padding: 12px 10px;">One
+                            size</button>
+                        <div class="dropdown-Content">
+                            <p>height : 31</p>
+                            <p>width : 46</p>
+                            <p>Depth: 16</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <button class="popup" onclick="myFunction()">ADD TO CARD
+                            <span class="popuptext" id="mypopup">Product added to cart</span>
+                        </button>
+                        <button id="wishlist" class="btn" style="background-color:silver;"
+                            onclick="document.getElementById('id01').style.display='block'" style="width:auto">WISHLIST</button>
+
+                        <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto">Click -->
+                            <!-- <Menu></Menu></button> -->
+
+                        <div id="id01" class="modal">
+                            <form class="modal-content animate" action="/action_page.php" method="post">
+                                <div class="imgcontainer">
+                                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                                        tittle="close modal">&times;</span>
+                                    <img src="mobile-147071827.jpg" alt="Avatar" class="avatar">
+                                    <h3>Login or Sign In</h3>
+                                </div>
+                                <hr style="opacity: 0.5;">
+                                <div class="container" style="align-items: center;">
+                                    <label for="uname"><b>Username</b></label>
+                                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                                    <label for="psw"><b>Password</b></label>
+                                    <input type="password" placeholder="Enter your password" name="psw" required>
+
+                                    <button type="submit">Login</button>
+                                    <label>
+                                        <input type="checkbox" checked="checked" name="remember">Remember me
+                                    </label>
+
+                                </div>
+
+                                <div class="container" style="background-color: antiquewhite;">
+                                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                                        class="cancelbtn">Cancel</button>
+                                    <span class="psw">Forgot<a href="# ">password?</a></span>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="id255" class="modal">
+                        <form class="modal-content animate" action="/action_page.php" method="post">
+                            <div class="img255">
+
+                                <img src="usericon" alt="sign in">
+                            </div>
+                            <div>
+                                <h3>Login or Sign in</h3>
+                            </div>
+
+                            <div class="form">
+
+                                <label for="number"><b>Mobile Number</b></label>
+                                <input type="number" name="number" placeholder="+91 | Mobile Number" required>
+
+                                <button type="submit">Continue</button>
+
+                                <label>
+                                    <input type="checkbox" checked="checked" name="remember">Remember Me
+                                </label>
+
+                                <div class="">
+                                    <button>Cancel</button>
+                                    <button>Sign Up</button>
+
+                                </div>
+
+
+                            </div>
+                        </form>
+                    </div>
+                    <hr style="opacity: 0.4;">
+                    <p>RS. 549 (50% OFF) <br>Seller: Omnitech Retail</p>
+                    <hr style="opacity: 0.4;">
+                    <h2>Product Details</h2>
+                    <p>100% Original Products</p>
+                    <p>pay on delivery might be available</p>
+                    <p>Easy 30 days returns and exchanges</p>
+                    <p>Try & Buy might be available</p>
+
+                    <h2>BEST OFFERS</h2>
+                    <h3>Best Price: Rs. 119</h3>
+                    <p>Applicable on: Orders above Rs. 2999 (only on first purchase)</p>
+                    <p>Expires in: 1 day 12 hours</p>
+                    <p>Coupon Discount: Rs. 500 off (check cart for final savings)</p>
+
+
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numberText"> 1 / 4 </div>
+                <img src="bag1.jpg" alt="stylish Bag" width='550' height='550'>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numberText"> 2 / 4 </div>
+                <img src="bag2.jpg" alt="Stylish Bag" width='550' height='550'>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numberText"> 3 / 4 </div>
+                <img src="bag3.jpg" alt="stylish Bag" width='550' height='550'>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numberText"> 4 / 4 </div>
+                <img src="bag4.jpg" alt="bag" width='550' height='550'>
+            </div>
+        </div>
+
+        <div>
+
+            <i id="next" onclick="nextSlide(1)" class="fas fa-angle-right"></i>
+            <i id="prev" onclick="prevSlide(-1)" class="fas fa-angle-left"></i>
+        </div>
+    </div>
+
+    <div style="margin-left: 250px;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/31d78c99b4.js" crossorigin="anonymous"></script>
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

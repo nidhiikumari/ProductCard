@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Ubuntu:wght@300&display=swap');
+ * {
+     box-sizing: border-box;
+ }
+ body {
+    font-family: 'Ubuntu', sans-serif;
+ }
+ .container {
+     margin: 18px;
+ }
+ .headline {
+     padding: 2px 0;
+     font-family: 'Ubuntu', sans-serif;
+     font-weight: bold;
+     font-size: 25px;
+     background: linear-gradient(to bottom right, #33ccff 0%, #ff33cc 100%);
+ }
+ .btn {
+     cursor: pointer;
+     margin: 29px 14px;
+     border: 1px solid  ;
+     padding: 25px;
+     border-radius: 12px;
+     width: 30vh;
+     background-color:rgb(243, 23, 151) ;
+     color: white;
+     
+ }
+ .dropdown {
+     position: relative;
+     display: inline-block;
+
+ }
+ .dropdown-Content {
+     display: none;
+     position: absolute;
+     bottom: 50px;
+     background-color: #f1f1f1;
+     min-width: 160px;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     z-index: 1;
+     transition: 0.7s ease-in;
+ }
+ .dropdown-Content p {
+     text-align: center;
+     padding: 12px 16px ;
+     display: block;
+ }
+ .dropdown-Content p:hover {
+     background-color: #ddd;
+ }
+ .dropdown:hover .dropdown-Content {
+     display: block;
+     transition: 0.8s ease-out;
+ }
+
+ .dropdown:hover #onesize {
+    opacity : 0.5;
+ }
+
+ .btn:hover {
+     opacity: 0.6;
+     transition: 0.8s ease-out;
+     border: 1px solid rgb(244,23, 151);
+     color: wheat;
+     
+ }
+ #wishlist:hover {
+     background-color:white ;
+     border: 1px solid black;
+     color: black;
+     
+ }
+ 
+ .timer {
+     background-color: rgb(204, 231, 247);
+     margin-top: 0;
+     padding: 2px 0;
+     text-align: center;
+ }
+
+ .content {
+     float:  right;
+       
+ }
+
+
+ .slideshowContainer {
+     position: relative;  
+ }
+ 
+#prev, #next {
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top : 50%;
+    width: auto;
+    margin-top: 10%;
+    padding: 18px;
+    color: rgba(0,0,0,0.4);
+    font-weight: bolder;
+    font-size: 30px;
+    border-radius: 0 3px 3px 0;
+    transition: 0.6s ease;
+    user-select: none;
+
+
+}
+#next {
+    
+    right: 57%;
+    border-radius: 0 3px 3px 0;
+    
+    
+}
+
+
+
+
+#prev:hover, #next:hover {
+    background-color: black;
+    color: white;
+}
+
+.numberText {
+    /* padding: 0px 16px; */
+    /* top: 0; */
+    font-size: 17px;
+    position: relative;
+    
+
+
+}
+
+.dot {
+    cursor: pointer;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+   
+}
+
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.2
+    }
+    to{opacity: 1}
+}
+@keyframes fade {
+    from {opacity: 0.2;}
+    to {opacity: 1}
+
+}
+
+/* ///////////////// */
+
+/* Popup container - can be anything you want */
+.popup {
+     position: relative;
+     display: inline-block;
+     cursor: pointer;
+     margin: 29px 14px;
+     border: 1px solid  ;
+     padding: 25px;
+     border-radius: 12px;
+     width: 30vh;
+     background-color:rgb(243, 23, 151) ;
+     color: white;
+     
+  }
+  .popup:hover {
+      opacity: 0.9;
+      /* font-size: 18px; */
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: rgb(105, 77, 77);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+  @media only screen and (max-width:300px) {
+      .content {
+          font-size: auto;
+      }
+      
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 8px;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* set a style for all buttons */
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 9px;
+    border: none;
+    cursor: pointer;
+    width: 100;
+    text-align: center;
+
+}
+button:hover {
+     opacity: 0.8;
+ }
+
+/* Extra styles for the cancel button */
+.cancelbtn{
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    /* border-radius: 50%; */
+}
+.container {
+    padding: 16px;
+}
+span.psw {
+    float: right;
+    padding-top: 26px;
+}
+/* The Modal (background) */
+.modal {
+    justify-items: center;
+    display: none;  /*hidden by default */
+    position: fixed; /* stay in place*/
+    z-index: 1; /*shit on top*/
+    left: 0;
+    top: 0;
+    width: 100%; /*full width*/
+    height: 100%;  /*full height*/
+    overflow: auto;  /*enable scroll if needed*/
+    background-color: rgb(0, 0, 0);  /*fallback color*/
+    background-color: rgba(0, 0, 0, 0.4);  /*Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    justify-content: center;
+    align-items: center;
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;   /* 5% from the top, 15% from the bottom and centered */
+    padding: 22px;
+    border: 1px solid #888;
+    width: 80%;  /*could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+   -webkit-animation: animatezoom 0.6s;
+   animation: animatezoom 0.6s;
+}
+ 
+@-webkit-keyframes animatezoom {
+   from {
+       -webkit-transform: scale (0)}
+       to {-webkit-transform: scale(1) }
+}
+
+@keyframes animatezoom {
+   from {transform: scale(0)}
+   to {-webkit-transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width:300px)
+{
+   span.psw {
+       display: block;
+       float: none;
+   }
+   .cancelbtn {
+       width: 100%;
+   }
+}
